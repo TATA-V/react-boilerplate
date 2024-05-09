@@ -1,9 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
   extends: ['@tata-v/eslint-config-react'],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [
@@ -11,4 +8,4 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
-}
+};
