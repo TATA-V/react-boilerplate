@@ -2,7 +2,7 @@
   "name": "react-boilerplate",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "app": "pnpm --ignore-workspace-root-check",
     "dev": "vite",
