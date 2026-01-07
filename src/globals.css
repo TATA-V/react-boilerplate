@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-pretendard: "Pretendard Variable", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --input-fg:#262626;
+}
+
+body {
+  font-family: var(--font-pretendard);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+  button,
+  a {
+    @apply cursor-pointer;
+  }
+  button:disabled,
+  a:disabled {
+    @apply cursor-default pointer-events-none;
+  }
+}
+textarea {
+  field-sizing: content;
+}
+
+@layer base {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-internal-autofill-selected {
+    -webkit-text-fill-color: var(--input-fg) !important;
+    transition: background-color 999999s ease-in-out 0s;
+  }
+}
