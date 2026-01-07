@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import type { ReactNode } from 'react';
+import { useState, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider, keepPreviousData } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-type Props = {
+interface Props {
   children: ReactNode;
-};
+}
 
 function makeQueryClient() {
   return new QueryClient({
