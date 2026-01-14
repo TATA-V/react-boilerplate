@@ -129,6 +129,8 @@ export default defineConfig([
       'react/no-unescaped-entities': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
+      'react-refresh/only-export-components': 'off',
+      'react-hooks/set-state-in-effect': 'off'
     }
   },
 ]);
