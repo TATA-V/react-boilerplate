@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import babel from '@rolldown/plugin-babel';
 import svgr from 'vite-plugin-svgr';
 import path from 'node:path';
 
@@ -10,11 +11,10 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [
-      react({
-        babel: {
-          plugins: [['babel-plugin-react-compiler']],
-        },
+      babel({
+        plugins: ['babel-plugin-react-compiler'],
       }),
+      react(),
       tailwindcss(),
       svgr({ include: '**/*.svg' }),
     ],
